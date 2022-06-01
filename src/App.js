@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "normalize.css";
+
+import Hero from "./components/Hero/Hero";
+import Button from "./components/Button/Button";
+import Section from "./components/Section/Section";
+import Article from "./components/Article/Article";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Hero title={"Title"} subtitle="Some about text in two lines">
+        <Button
+          type="button"
+          handleClick={() => window.location.replace("https://reactjs.org/")}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Button
+        </Button>
+      </Hero>
+      <Section>
+        <Article
+          title="Portfolio"
+          text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis accusamus deleniti eveniet quam sapiente nulla?"
+        >
+          <Portfolio></Portfolio>
+        </Article>
+      </Section>
+    </>
   );
 }
 

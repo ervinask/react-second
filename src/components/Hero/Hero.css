@@ -1,0 +1,12 @@
+header {
+  text-align: center;
+  color: #fff;
+  background-image: url("../../../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 8rem 0;
+}
+
+.title {
+  margin: 0;
+}
